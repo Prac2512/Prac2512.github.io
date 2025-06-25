@@ -3,160 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRACHI PATIL | EMBEDDED SYSTEMS</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Helvetica', sans-serif;
-      background-color: #f8fbff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #e0f7fa 0%, #f1f8e9 100%);
-      color: #004d40;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-      text-transform: uppercase;
-    }
-    header p {
-      font-size: 1.1em;
-      margin-bottom: 0.5em;
-    }
-    nav {
-      background: #ffffff;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
-    }
-    nav a {
-      margin: 0 15px;
-      color: #00796b;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-size: 0.9em;
-    }
-    nav a:hover { text-decoration: underline; }
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #00796b;
-      margin-bottom: 1em;
-      border-bottom: 2px solid #80cbc4;
-      padding-bottom: 0.3em;
-      text-transform: uppercase;
-    }
-    .skills span {
-      display: inline-block;
-      margin: 0.4em;
-      background-color: #e0f2f1;
-      color: #004d40;
-      padding: 0.4em 0.8em;
-      border-radius: 20px;
-      border: 1px solid #b2dfdb;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.85em;
-    }
-    a {
-      color: #00796b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-    ul { list-style-type: none; padding: 0; }
-    .intro-banner {
-      text-align: center;
-      padding: 30px 0;
-    }
-    .intro-banner img {
-      width: 90%;
-      max-width: 900px;
-      border-radius: 8px;
-    }
-    .project {
-      margin-bottom: 30px;
-    }
-    .project h3 {
-      color: #004d40;
-      margin-bottom: 0.3em;
-    }
-    .project p {
-      margin-bottom: 0.8em;
-    }
-  </style>
+  <title>Prachi Patil - Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="intro-banner">
-    <img src="https://github.com/smaranjitghose/smaranjitghose/blob/master/assets/Profile_Intro.gif" alt="Intro Banner" />
-  </div>
-  <header>
-    <h1>Prachi Patil</h1>
-    <p>Embedded Systems | IoT | Sensor Design | Firmware Development | RTOS | PCB Design</p>
-    <p>
-      <a href="mailto:patilprachi2598@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/prachi2" target="_blank">LinkedIn</a> |
-      <a href="https://crazytaler.blogspot.com" target="_blank">Blog</a> |
-      <a href="https://www.upwork.com/freelancers/~01af509cb512d47b13" target="_blank">Upwork</a>
-    </p>
-  </header>
+  <div id="root"></div>
+  <script type="text/babel">
+    const Header = () => (
+      <header className="bg-gray-900 text-white py-8 text-center">
+        <h1 className="text-4xl font-bold">Prachi Patil</h1>
+        <p className="mt-2 text-lg">Embedded Systems Engineer | IoT Specialist</p>
+        <div className="mt-4 flex justify-center gap-4">
+          <a href="mailto:patilprachi2598@gmail.com" className="hover:underline">patilprachi2598@gmail.com</a>
+          <span>|</span>
+          <a href="tel:+919686112740" className="hover:underline">+91-968-611-2740</a>
+          <span>|</span>
+          <a href="https://github.com/Prac2512" target="_blank" className="hover:underline">github.com/Prac2512</a>
+        </div>
+        <p className="mt-2">CV Raman Nagar, Bangalore</p>
+      </header>
+    );
 
-  <section>
-    <h2>Highlighted Projects</h2>
-    <div class="project">
-      <h3>SmartLiving using Matter</h3>
-      <p>Created a unified Matter-based smart home automation system with ESP32 and Matter protocol for indoor and garden devices, supporting automation, control, and monitoring with secure interoperability.</p>
-    </div>
-    <div class="project">
-      <h3>Efficient IoT Logistics Solution</h3>
-      <p>Developed a real-time logistics monitoring system using Matter protocol and IoT devices to track consignment integrity and ensure shipment reliability in global supply chains.</p>
-    </div>
-    <div class="project">
-      <h3>Telerobotics System</h3>
-      <p>Worked on remote telerobotic control for inaccessible environments, integrating embedded software and communication protocols.</p>
-    </div>
-    <div class="project">
-      <h3>BLDC Motor Controller & Power Electronics Simulation</h3>
-      <p>Designed controllers for BLDC motors and simulated converters and inverters (buck, boost, buck-boost) in Simulink with model-based design.</p>
-    </div>
-    <div class="project">
-      <h3>Battery Management Systems (Single & Multi-Cell)</h3>
-      <p>Engineered BMS systems ensuring safe charging/discharging using sensors and protection algorithms, supporting EV applications.</p>
-    </div>
-    <div class="project">
-      <h3>Smart Vehicle Assessment & ADAS</h3>
-      <p>Built a V2V-based alert system for early fault detection and driver assistance using Android apps and onboard diagnostics.</p>
-    </div>
-    <div class="project">
-      <h3>Programmable Suction & Packing Machine</h3>
-      <p>Designed a programmable medical liquid dispensing and packing system using embedded controllers for precise automation.</p>
-    </div>
-    <div class="project">
-      <h3>Hardware Asset Tracking, Software Promotion & Reservation Power App</h3>
-      <p>Developed Power Apps solutions for IT asset tracking, SW promotion approvals, and hardware reservation with full Dataverse and email automation integration.</p>
-    </div>
-  </section>
+    const Section = ({ title, children }) => (
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-gray-300">{title}</h2>
+        {children}
+      </section>
+    );
 
-  <footer>
-    &copy; 2025 Prachi Patil | All Rights Reserved
-  </footer>
+    const ExperienceItem = ({ role, company, duration, details }) => (
+      <div className="mb-6">
+        <h3 className="text-xl font-medium">{role}</h3>
+        <p className="text-gray-600">{company} | {duration}</p>
+        <ul className="list-disc ml-6 mt-2 text-gray-700">
+          {details.map((detail, index) => (
+            <li key={index}>{detail}</li>
+          ))}
+        </ul>
+      </div>
+    );
+
+    const ProjectItem = ({ name, description }) => (
+      <div className="mb-4">
+        <h3 className="text-lg font-medium">{name}</h3>
+        <p className="text-gray-600">{description}</p>
+      </div>
+    );
+
+    const App = () => (
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <Header />
+        <main className="mt-8">
+          <Section title="Objective">
+            <p className="text-gray-700">
+              Passionate and detail-oriented engineer with hands-on experience in embedded systems, ECU development, and smart connectivity solutions. Seeking to contribute to innovative projects through strong skills in embedded software, communication protocols, and analytical tools, while continuing to grow in a collaborative and dynamic environment.
+            </p>
+          </Section>
+
+          <Section title="Experience">
+            <ExperienceItem
+              role="Engineering Intern"
+              company="Volvo Group Pvt Ltd"
+              duration="June 2024 – Present"
+              details={[
+                "Developed Python automation scripts for ECU key injection by modifying .hex files using .inc and .map via HexView; integrated with the build system via make security key.",
+                "Automated multi-part number ODX exports using export odx from sews.",
+                "Built Power BI dashboards to track release metrics and approvals.",
+                "Developed Power Apps for asset booking, workflow approvals, and decision requests; integrated with Power Automate for notifications and Dataverse synchronization.",
+                "Maintained structured Progression build failure issue logs documenting weekly build issues, root causes, and resolutions.",
+                "Designing schematics and PCB layout for PMSL Lab."
+              ]}
+            />
+            <ExperienceItem
+              role="Embedded Engineer"
+              company="Social Hardware International Pvt Ltd"
+              duration="Jan 2023 – Sep 2023"
+              details={[
+                "Developed teleoperation algorithms for responsive remote control of hardware devices.",
+                "Integrated sensors for real-time feedback and perception in remote hardware environments.",
+                "Designed, tested, and verified Telerobotic Hand PCB and Finger PCB."
+              ]}
+            />
+            <ExperienceItem
+              role="Embedded Engineer"
+              company="SenseGiz Technologies Pvt Ltd"
+              duration="Nov 2022 – Jan 2023"
+              details={[
+                "Designed and developed an IoT hardware platform for fleet management using TI-SimpleLink MCU.",
+                "Implemented application-layer logic in Embedded C for optimized device performance and efficient data handling."
+              ]}
+            />
+            <ExperienceItem
+              role="Embedded Engineer"
+              company="Decibels Lab Pvt Ltd"
+              duration="Oct 2020 – Aug 2022"
+              details={[
+                "Designed and validated BLDC controller, charger, DC-DC converter, and BMS PCBs using Arduino and KiCAD.",
+                "Delivered courses on Simulink-based modeling of BLDC controller, charger, and DC-DC converter.",
+                "Assisted in setting up an EV lab focused on power electronics."
+              ]}
+            />
+          </Section>
+
+          <Section title="Skills">
+            <div className="grid grid-cols-2 gap-4">
+              <ul className="list-disc ml-6 text-gray-700">
+                <li><strong>MCUs:</strong> TI-SimpleLink, STM32FX, Tiva, Arduino, ESP32C6, ESP8266, Raspberry Pi</li>
+                <li><strong>Protocols:</strong> I2C, SPI, UART, CAN, USB, BLE, Bluetooth, WiFi, RF, Matter, MQTT</li>
+                <li><strong>Programming:</strong> C, C++, Embedded C, Python; Linux/RTOS application and system programming</li>
+                <li><strong>OS:</strong> Deep understanding of Linux/RTOS architecture, system calls, and device trees</li>
+                <li><strong>Tools:</strong> Git, Repo, Perforce, Vector toolchain, ET Tool, SE Tool, Power Platforms</li>
+              </ul>
+              <ul className="list-disc ml-6 text-gray-700">
+                <li><strong>CI/CD & VCS:</strong> Jenkins, Bitbucket, Git</li>
+                <li><strong>EDA & Simulation:</strong> KiCAD, LTspice, Multisim, MATLAB-Simulink</li>
+                <li><strong>Cloud/IoT:</strong> Firebase, ThingSpeak</li>
+                <li><strong>Project Tools:</strong> Jira, Agile methodologies</li>
+                <li><strong>Soft Skills:</strong> Communication, Leadership, Teamwork, Problem-Solving</li>
+              </ul>
+            </div>
+          </Section>
+
+          <Section title="Education">
+            <div className="mb-4">
+              <h3 className="text-lg font-medium">M.Tech in Internet of Things and Sensor Design</h3>
+              <p className="text-gray-600">Vellore Institute of Technology, Vellore | 2023 – Present | CGPA: 7.43</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium">Bachelor of Engineering in Electrical and Electronics Engineering</h3>
+              <p className="text-gray-600">KLE Technological University, Belgaum | 2021 | CGPA: 6.80</p>
+            </div>
+          </Section>
+
+          <Section title="Projects">
+            <ProjectItem
+              name="Hardware Asset Tracking & Reservation Power App"
+              description="Developed Power Apps for asset booking and workflow approvals, integrated with Power Automate."
+            />
+            <ProjectItem
+              name="SmartLiving using Matter"
+              description="Unified home and garden spaces with IoT solutions using Matter protocol."
+            />
+            <ProjectItem
+              name="BLDC Motor Controller & BMS"
+              description="Designed PCBs and simulated MBD models using Simulink for BLDC controllers and battery systems."
+            />
+            <ProjectItem
+              name="Smart Vehicle Assessment System"
+              description="Implemented V2V communication for real-time vehicle diagnostics."
+            />
+          </Section>
+
+          <Section title="Achievements">
+            <ul className="list-disc ml-6 text-gray-700">
+              <li>Best Innovation Award – BMS Project at KLE Tech (2021)</li>
+              <li>KPIT Sparkle 2020 – Top 50 in India</li>
+              <li>1st Prize – Smart Vehicle Assessment System, IEEE Yesist12, Thailand (2019)</li>
+              <li>1st Prize – The I-Pot, WIE CODE Hackathon, Tumakuru (2019)</li>
+            </ul>
+          </Section>
+
+          <Section title="Publications">
+            <ul className="list-disc ml-6 text-gray-700">
+              <li>A Detailed Study on State of Charge Estimation Methods. DOI: 10.1007/978-981-16-8862-1_14</li>
+              <li>Comparative Analysis of State-of-Health Estimation Techniques. DOI: 10.4018/979-8-3693-5247-2.ch004</li>
+            </ul>
+          </Section>
+
+          <Section title="Certifications">
+            <ul className="list-disc ml-6 text-gray-700">
+              <li>Cisco: Introduction to IoT</li>
+              <li>MathWorks: Embedded Coder, MATLAB, ML, and DL Onramps</li>
+              <li>Udemy: Mastering Microcontroller, FreeRTOS, Computer Networks Security</li>
+              <li>Coursera: Network Communication, Google Project Management, Virtual Reality</li>
+            </ul>
+          </Section>
+        </main>
+        <footer className="mt-8 text-center text-gray-600 py-4">
+          <p>&copy; 2025 Prachi Patil. All rights reserved.</p>
+        </footer>
+      </div>
+    );
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
 </body>
 </html>
